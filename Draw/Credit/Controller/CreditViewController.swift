@@ -57,13 +57,14 @@ class CreditViewController: UIViewController,UIScrollViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       initV()
+        initV()
         scrollDashboardBg.setContentOffset(CGPoint(x: scrollDashboardBg.width, y: 0), animated: false)
         // Do any additional setup after loading the view.
     }
     func initV(){
         pageScroll.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
-        let layer = EDraw.gradientLayer(rect: self.view.bounds, startAnchor: CGPoint(x:0,y:0), endAnchor: CGPoint(x:0,y:1), colors:UIColor(hexString: "#1BBC9E"),UIColor(hexString:"#03a5c2"))
+        let layer = EDraw.gradientLayer(rect: UIScreen.main.bounds, startAnchor: CGPoint(x:0,y:0), endAnchor: CGPoint(x:0,y:1), colors:UIColor(hexString: "#1BBC9E"),UIColor(hexString:"#03a5c2"))
+        
         self.view.layer.insertSublayer(layer, at: 0)
         
         dashboardView_score=DashboardView(score:678,time:"2016.02.06")
@@ -91,7 +92,7 @@ class CreditViewController: UIViewController,UIScrollViewDelegate {
 //        if nOffset>=50{
 //        }
         scrollPageInsex=Int((scrollView.contentOffset.x+scrollView.width/2)/scrollView.width)
-        self.viewButBg_score.alpha=scrollView.contentOffset.x/scrollView.width
+        self.viewButBg_score.alpha = 1-scrollView.contentOffset.x/scrollView.width
 
     }
     

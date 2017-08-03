@@ -477,7 +477,7 @@
     <resources>
         <image name="creditup.png" width="40" height="40"/>
         <image name="filter-icon.png" width="25" height="25"/>
-        <image name="home_but_bg" width="16" height="16"/>
+        <image name="home_but_bg" width="40" height="40"/>
         <image name="icon-back.png" width="15" height="15"/>
         <image name="loan.png" width="25" height="25"/>
         <image name="repayment.png" width="25" height="25"/>
